@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perambahan Brunei Notes</title>
+
+    <style>
+
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #ebdff2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: url('../Perambahan/picture/flower background.png') no-repeat center center/cover;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ff6b81;
+        }
+
+       
+        .cute-navbar {
+            background-color: #7179ba;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cute-navbar .logo {
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .cute-navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .cute-navbar ul li {
+            margin: 0 20px;
+        }
+
+        .cute-navbar ul li a {
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            color: #5e5e5e;
+            display: block;
+            padding: 15px;
+            border-radius: 15px;
+            background-color: #ffebcc;
+            position: relative;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        
+        .cute-navbar ul li:nth-child(1) a {
+            background-color: #b3e5fc;
+            clip-path: polygon(5% 0%, 95% 0%, 100% 95%, 0% 100%);
+        }
+
+        .cute-navbar ul li:nth-child(2) a {
+            background-color: #dcedc8;
+            clip-path: polygon(0% 5%, 100% 5%, 95% 100%, 5% 95%);
+        }
+
+        .cute-navbar ul li:nth-child(3) a {
+            background-color: #ffecb3;
+            clip-path: polygon(10% 0%, 90% 0%, 100% 90%, 0% 100%);
+        }
+
+        .cute-navbar ul li:nth-child(4) a {
+            background-color: #ffcdd2;
+            clip-path: polygon(5% 5%, 95% 0%, 100% 95%, 0% 95%);
+        }
+
+        .cute-navbar ul li:nth-child(5) a {
+            background-color: #ffbe99;
+            clip-path: polygon(0% 5%, 100% 0%, 95% 95%, 5% 100%);
+        }
+
+        
+        .cute-navbar ul li a::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 10px;
+            background-color: #ffd54f;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+        }
+
+        .cute-navbar ul li a:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .cute-navbar ul li a:active {
+            transform: scale(0.95);
+        }
+
+       
+        main {
+            padding: 30px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: #000000;
+            text-align: center;
+        }
+		
+        section h3 {
+            font-size: 1.6rem;
+            color: #000000;
+            text-align: center;
+        }
+
+        .note {
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .note:hover {
+            transform: scale(1.02);
+        }
+
+        .note h3 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .note p {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+       
+        .alphabet-nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .alphabet-nav a {
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 5px;
+            color: #5c6bc0;
+            font-weight: bold;
+        }
+
+        .alphabet-nav a:hover {
+            color: #1a237e;
+        }
+
+        .alphabet-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+      
+        .notes-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 2 by 2 grid */
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+
+        .note {
+            background-color: white;
+            border: 5px solid white;
+            border-radius: 15px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+       
+        .note .note-content {
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        
+        #A .note-content { background-color: #e1bee7; }  
+        #B .note-content { background-color: #bbdefb; }  
+        #C .note-content { background-color: #c8e6c9; }  
+        #D .note-content { background-color: #ffecb3; }  
+        #G .note-content { background-color: #ffccbc; }  
+        #H .note-content { background-color: #b2ebf2; }  
+        #I .note-content { background-color: #d7ccc8; }  
+        #J .note-content { background-color: #ffcdd2; }  
+        #K .note-content { background-color: #b2dfdb; }  
+        #L .note-content { background-color: #f8bbd0; }  
+        #M .note-content { background-color: #c5cae9; }  
+        #N .note-content { background-color: #ffe082; }  
+        #O .note-content { background-color: #80cbc4; }  
+        #P .note-content { background-color: #9fa8da; }  
+        #R .note-content { background-color: #cfd8dc; }  
+        #S .note-content { background-color: #aed581; }  
+        #T .note-content { background-color: #ffcc80; }  
+		#U .note-content { background-color: #e6ee9c; }  
+		#W .note-content { background-color: #b39ddb; }  
+
+       
+        .note:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+		
+		.sound-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffcc80;
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .sound-button:hover {
+            background-color: #5e5e5e;
+        }
+	
+        footer {
+            background-color: #7179ba;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 10px 0;
+            color: #fdfeff;
+        }
+
+        footer .social-media a {
+            margin: 0 10px;
+            color: #333;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-media a:hover {
+            color: #ff6b81;
+        }
+		
+		.sound-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f4bff5;
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .sound-button:hover {
+            background-color: #5e5e5e;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <nav class="cute-navbar">
+        <a href="../perambahan/Index.html"><img src="../perambahan/picture/Logo.png" alt="Logo" class="logo"></a>
+        <ul>
+            <li><a href="../perambahan/Index.html">Home</a></li>
+            <li><a href="../perambahan/About Us.html">About Us</a></li>
+            <li><a href="../perambahan/Lesson.html">Lesson</a></li>
+            <li><a href="../perambahan/Activity.html">Activity</a></li>
+            <li><a href="../perambahan/Contact Us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+   
+    <main>
+        
+        <section id="home">
+            <h2>Welcome to Perambahan Brunei Lesson</h2>
+            <h3>Flashcard Notes</h3>
+            <iframe src="https://quizlet.com/936410791/flashcard/embed?i=5yvyq5&x=1jj1" width="100%" height="500" style="border:0" allowfullscreen></iframe>
+        </section>
+
+        
+        <section id="notes">
+            <h3>Learning Notes</h3>
+
+            
+            <div class="alphabet-nav">
+                <a href="#A">A</a> |
+                <a href="#B">B</a> |
+                <a href="#C">C</a> |
+                <a href="#D">D</a> |
+                <a href="#G">G</a> |
+				<a href="#H">H</a> |
+                <a href="#I">I</a> |
+				<a href="#J">J</a> |
+				<a href="#K">K</a> |
+				<a href="#L">L</a> |
+				<a href="#M">M</a> |
+				<a href="#N">N</a> |
+				<a href="#O">O</a> |
+				<a href="#P">P</a> |
+				<a href="#R">R</a> |
+				<a href="#S">S</a> |
+				<a href="#T">T</a> |
+				<a href="#U">U</a> |
+				<a href="#W">W</a> |
+            </div>
+
+    
+    <h2>Perambahan Brunei A</h2>
+    <div class="notes-container" id="A">
+        <div class="note">
+            <div class="note-content">
+                <h3>Ambuk Tunggal</h3>
+                <p>Orang yang tidak disukai dan biasanya dia dipulaukan.</p>
+            </div>
+        </div>
+        <div class="note">
+            <div class="note-content">
+                <h3>Angat-Angat Dingin</h3>
+                <p>Kurang sihat atau demam.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Ayam sigun</h3>
+                <p>Orang yang handal, pendekar atau orang yang suka berkelahi.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Anak bunga tubuh</h3>
+                <p>Anak sulung.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Ampar kajang</h3>
+                <p>Jatuh terlentang akibat dipukul atau tergelincir.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Amas tampawanan</h3>
+                <p>Orang yang sangat dikasihi.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Amai tangan</h3>
+                <p>Suka menyentuh sesuatu tanpa tujuan.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Anak dagang</h3>
+                <p>Anak yang kematian ibu kandungnya.</p>
+            </div>
+        </div>
+    </div>
+
+  
+    <h2>Perambahan Brunei B</h2>
+    <div class="notes-container" id="B">
+        <div class="note">
+            <div class="note-content">
+                <h3>Berdiri duduk</h3>
+                <p>Bertungkus lumus bekerja.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Biawak pungur</h3>
+                <p>Lelaki yang malas dan enggan berusaha mencari rezeki.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Balas ati</h3>
+                <p>Berbuyan-buyah mulut.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Biar cangkik jangan putus</h3>
+                <p>Berjimat cermat supaya tidak kehabisan.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Berisi jua balanga</h3>
+                <p>Beroleh jua tangkapan (ikan).</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Berkulut-kulut</h3>
+                <p>Sentiasa berada di satu tempat.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Bacakap inda badinding-dinding</h3>
+                <p>Percakapan yang tidak bertapis, terlalu berterus terang.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Babasah bakaring</h3>
+                <p>Bekerja bertungkus-lumus tanpa menghiraukan rasa letih.</p>
+            </div>
+        </div>
+    </div>
+
+   
+    <h2>Perambahan Brunei C</h2>
+    <div class="notes-container" id="C">
+        <div class="note">
+            <div class="note-content">
+                <h3>Cakap ambur-ambur</h3>
+                <p>Bercakap sembarangan.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Caradik macam buratak nasi</h3>
+                <p>Bercakap tidak berhenti-henti.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Capak pahang</h3>
+                <p>Makanan keperluan harian.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Cukup pun inda tangan kiri</h3>
+                <p>Bukan tandingan atau lawanan.</p>
+            </div>
+        </div>
+    </div>
+	
+	
+    <h2>Perambahan Brunei D</h2>
+    <div class="notes-container" id="D">
+        <div class="note">
+            <div class="note-content">
+                <h3>Di(h)ujung-(h)ujung lidah</h3>
+                <p>Antara ingat atau tidak ingat.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Di mata-mata</h3>
+                <p>Sentiasa teringat-ingat, terbayang-bayang.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Datang (h)antu</h3>
+                <p>Sangat marah dan tidak dapat mengawal diri.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Disalin ke balatak mulih jua ke tingkur</h3>
+                <p>Walaupun lama merantau, akhirnya pulang jua ke negeri sendiri.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Dua dunia</h3>
+                <p>Dua tempat tinggal.</p>
+            </div>
+        </div>
+    </div>
+	
+	
+    <h2>Perambahan Brunei G</h2>
+    <div class="notes-container" id="G">
+        <div class="note">
+            <div class="note-content">
+                <h3>Galak rasa</h3>
+                <p>Terasa malu.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Gatal (h)ati</h3>
+                <p>Sangat ingin tahu.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Garam-garam sakit</h3>
+                <p>Rasa marah yang masih dapat dikawal (geram).</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Gila jalan</h3>
+                <p>Terlalu suka berjalan.</p>
+            </div>
+        </div>
+    </div>
+	
+    <h2>Perambahan Brunei H</h2>
+    <div class="notes-container" id="H">
+        <div class="note">
+            <div class="note-content">
+                <h3>(H)abis bersadaian</h3>
+                <p>Terbiar berlambak(barang dan lain-lain).</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>(H)ingus pun inda tepalit</h3>
+                <p>Tidak dapat melakukan sesuatu yang lain (kerana terlalu sibuk).</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>(H)itam meluhum</h3>
+                <p>Agak gelap.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Hulubalang rumah</h3>
+                <p>Orang harapan dan diseganni dalam keluarga.</p>
+            </div>
+        </div>
+    </div>
+	
+
+    <h2>Perambahan Brunei I</h2>
+    <div class="notes-container" id="I">
+        <div class="note">
+            <div class="note-content">
+                <h3>Inda tantu bigi-bigian</h3>
+                <p>Perkataan atau percakapan tidak jelas didengar.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Inda arakat</h3>
+                <p>Tidak kekal (pencarian, perolehan, pendapatan).</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Ia bertelur ia jua berpakak</h3>
+                <p>Mendedahkan kelemahan sendiri.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Injin papak</h3>
+                <p>Gigi.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Isi perut</h3>
+                <p>Rahsia diri.</p>
+            </div>
+        </div>
+    </div>
+	
+	
+    <h2>Perambahan Brunei J</h2>
+    <div class="notes-container" id="J">
+        <div class="note">
+            <div class="note-content">
+                <h3>Jadi sasaban</h3>
+                <p>Menjadi sebab atau alasan.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Jadi susur gigi</h3>
+                <p>Menjadi bahan cerita dan gurau senda.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Jadi ulam</h3>
+                <p>Menjadi mangsa.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Jangan melangoi saja, tunduk-tunduki jua ke bawah</h3>
+                <p>Apabila mendapat kesenangan hendaklah ingat kepada masa susah atau asa usul.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Jarang-jarang kain</h3>
+                <p>Kurang jelas atau kabur (penglihatan).</p>
+            </div>
+        </div>
+    </div>
+	
+
+    <h2>Perambahan Brunei K</h2>
+    <div class="notes-container" id="K">
+        <div class="note">
+            <div class="note-content">
+                <h3>Kambang bulu</h3>
+                <p>Berasa ngeri atau seram.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Kambang liur</h3>
+                <p>Berasa jijik.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Kalang ati</h3>
+                <p>Sedih hati hingga tiada selera makan dan minum kerana teringat orang yang dikasihi.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Kapir malaun</h3>
+                <p>Orang yang terlalu jahil tentang agama.</p>
+            </div>
+        </div>
+    </div>
+	
+	
+    <h2>Perambahan Brunei L</h2>
+    <div class="notes-container" id="L">
+        <div class="note">
+            <div class="note-content">
+                <h3>Lamah liat</h3>
+                <p>Lambat pergerakkan.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Lada padi</h3>
+                <p>Berbadan kecil tetapi berani.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Lidah api</h3>
+                <p>Keras dan kasar (percakapan).</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Lain naik pinang lain naik nibung</h3>
+                <p>Tidak sepadan atau seimbang (pembahagian tugas).</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Larat ke bujang nikah</h3>
+                <p>Menyimpang daripada tujuan asal.</p>
+            </div>
+        </div>
+    </div>
+	
+	
+    <h2>Perambahan Brunei M</h2>
+    <div class="notes-container" id="M">
+        <div class="note">
+            <div class="note-content">
+                <h3>Macam kikik sauk-sauk</h3>
+                <p>Tidak tetap pendirian.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Mandi itik</h3>
+                <p>Mandi tidak basah seluruh badan.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Membawa rasa</h3>
+                <p>Mencari ketenangan (fikiran, perasaan, dan lain-lain).</p>
+            </div>
+		</div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Macam gelambir ayam</h3>
+                <p>Kendur dan berkedut-kedut (kulit).</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Macam ular lundung</h3>
+                <p>Malas.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Macam ampulur gandum</h3>
+                <p>Tidak bertenaga (orang).</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Macam ambuk di tunjang</h3>
+                <p>Suka berangan-angan tanpa berusaha.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Macam angin</h3>
+                <p>Tidak berkesan (nasihat).</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Macam dinding</h3>
+                <p>Tidak dihormati.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Macam itik sudu-sudu</h3>
+                <p>Suka menghadirkan diri walaupun tidak dijemput.</p>
+            </div>
+        </div>
+    </div>
+	
+	
+    <h2>Perambahan Brunei N</h2>
+    <div class="notes-container" id="N">
+        <div class="note">
+            <div class="note-content">
+                <h3>Naik macam takuyung mulih macam burung</h3>
+                <p>Naik bekerja lambat tetapi pulangnya cepat.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Naik sisik</h3>
+                <p>Meningkat maju.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Nasur tangan</h3>
+                <p>Sering merosakkan harta benda (tanpa disedari).</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Nuhun nafsu</h3>
+                <p>Hilang selera.</p>
+            </div>
+        </div>
+    </div>
+	
+	
+    <h2>Perambahan Brunei O</h2>
+    <div class="notes-container" id="O">
+        <div class="note">
+            <div class="note-content">
+                <h3>Otak ambuyat</h3>
+                <p>Lembab berfikir.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Orang diri</h3>
+                <p>Dangsanak atau kekasih/tunang.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Otak di kepala lutut</h3>
+                <p>Tidak menggunakan fikiran dengan betul.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Otak bergarohong</h3>
+                <p>Tidak cerdas.</p>
+            </div>
+        </div>
+    </div>
+	
+	
+    <h2>Perambahan Brunei P</h2>
+    <div class="notes-container" id="P">
+        <div class="note">
+            <div class="note-content">
+                <h3>Puah aing mata</h3>
+                <p>Mudah menangis.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Panas tangan</h3>
+                <p>Tidak dapat berjimat cermat (boros).</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Pantas mulut</h3>
+                <p>Cepat menyebarkan cerita.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Penyawa(h)an</h3>
+                <p>Orang yang menjadi pengharapan.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Putih tapak kaki</h3>
+                <p>Ketakutan dan terus berlari.</p>
+            </div>
+        </div>
+    </div>
+	
+	
+    <h2>Perambahan Brunei R</h2>
+    <div class="notes-container" id="R">
+        <div class="note">
+            <div class="note-content">
+                <h3>Rambang-rambang kuasi</h3>
+                <p>Cuba-cuba atau agak-agak sahaja.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Rebah (h)ati</h3>
+                <p>Terpikat atau berkenan.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Rumah bertongkatkan bedil</h3>
+                <p>Kediaman orang berada atau rumah mewah.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Ragap (h)ati</h3>
+                <p>Berasa yakin.</p>
+            </div>
+        </div>
+    </div>
+	
+    <h2>Perambahan Brunei S</h2>
+    <div class="notes-container" id="S">
+        <div class="note">
+            <div class="note-content">
+                <h3>Seangkat-angkat (h)ati</h3>
+                <p>Seikhlas hati.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Seburuk-buruk daging inda jua terbuang</h3>
+                <p>Dangsanak tetap dangsanak (walaupun jahat).</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Sejuk tangan</h3>
+                <p>Mudah mendapat rezeki.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Seri kampung</h3>
+                <p>Perempuan yang tercantik (dalam kampung).</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Surung kurapak</h3>
+                <p>Banyak cakap tetapi kurang kerja.</p>
+            </div>
+        </div>
+    </div>
+	
+	
+    <h2>Perambahan Brunei T</h2>
+    <div class="notes-container" id="T">
+        <div class="note">
+            <div class="note-content">
+                <h3>Turun-turun ayam</h3>
+                <p>Pergi atau membuat sesuatu tanpa persediaan.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Tampung-tampung bubus</h3>
+                <p>Menyampuk percakapan tanpa tahu hujung pangkal.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Terkidum santul tertawa luwing</h3>
+                <p>Senyum sedikit sahaja tetapi bermakna.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Tinggi-tinggi payau</h3>
+                <p>Tinggi pengajian pada nama sahaja.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Tukan asah</h3>
+                <p>Suka menghasut (orang).</p>
+            </div>
+        </div>
+    </div>
+	
+	
+    <h2>Perambahan Brunei U</h2>
+    <div class="notes-container" id="U">
+        <div class="note">
+            <div class="note-content">
+                <h3>Umpan alir</h3>
+                <p>Seseorang atau sesuatu yang diperalatkan untuk maslahat.</p>
+            </div>
+        </div>
+	</div>
+	
+	
+    <h2>Perambahan Brunei W</h2>
+    <div class="notes-container" id="W">
+        <div class="note">
+            <div class="note-content">
+                <h3>Walaupun tidur sebantal, mimpi berlainan</h3>
+                <p>Tiap-tiap orang berlainan pendapat atau pendirian.</p>
+            </div>
+        </div>
+		<div class="note">
+            <div class="note-content">
+                <h3>Wang sendiri berdiri, wang orang berkurang</h3>
+                <p>Berusaha sendiri lebih baik daripada berharap kepada orang lain.</p>
+            </div>
+        </div>
+	</div>
+	    </section>
+	</main>
+	
+	<audio id="background-sound" src="../perambahan/music/background_sound.mp3" loop></audio>
+    <button id="sound-toggle" class="sound-toggle">🔊</button>
+
+    <script>
+        const soundToggleButton = document.getElementById('sound-toggle');
+        const backgroundSound = document.getElementById('background-sound');
+        let isSoundPlaying = localStorage.getItem('isSoundPlaying') === 'true';
+
+        
+        if (isSoundPlaying) {
+            backgroundSound.play();
+            soundToggleButton.textContent = '🔊';
+        } else {
+            soundToggleButton.textContent = '🔇';
+        }
+
+        soundToggleButton.addEventListener('click', () => {
+            isSoundPlaying = !isSoundPlaying;
+            if (isSoundPlaying) {
+                backgroundSound.play();
+                soundToggleButton.textContent = '🔊';
+            } else {
+                backgroundSound.pause();
+                soundToggleButton.textContent = '🔇';
+            }
+            localStorage.setItem('isSoundPlaying', isSoundPlaying);
+        });
+    </script>
+	
+	
+    <footer>
+        <p>&copy; 2024 Perambahan Brunei. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+		

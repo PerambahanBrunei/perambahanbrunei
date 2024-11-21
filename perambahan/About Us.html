@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #ebdff2;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        .cute-navbar {
+            background-color: #7179ba; 
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        
+        .cute-navbar .logo {
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        
+        .cute-navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .cute-navbar ul li {
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .cute-navbar ul li a {
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            color: #5e5e5e;
+            display: block;
+            padding: 15px;
+            border-radius: 15px;
+            background-color: #ffebcc;
+            position: relative;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        
+        .cute-navbar ul li:nth-child(1) a {
+            background-color: #b3e5fc;
+            clip-path: polygon(5% 0%, 95% 0%, 100% 95%, 0% 100%);
+        }
+
+        .cute-navbar ul li:nth-child(2) a {
+            background-color: #dcedc8;
+            clip-path: polygon(0% 5%, 100% 5%, 95% 100%, 5% 95%);
+        }
+
+        .cute-navbar ul li:nth-child(3) a {
+            background-color: #ffecb3;
+            clip-path: polygon(10% 0%, 90% 0%, 100% 90%, 0% 100%);
+        }
+
+        .cute-navbar ul li:nth-child(4) a {
+            background-color: #ffcdd2;
+            clip-path: polygon(5% 5%, 95% 0%, 100% 95%, 0% 95%);
+        }
+
+        .cute-navbar ul li:nth-child(5) a {
+            background-color: #ffbe99;
+            clip-path: polygon(0% 5%, 100% 0%, 95% 95%, 5% 100%);
+        }
+
+       
+        .cute-navbar ul li a::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 10px;
+            background-color: #ffd54f;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+        }
+
+        .cute-navbar ul li a:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .cute-navbar ul li a:active {
+            transform: scale(0.95);
+        }
+
+       
+        .cute-navbar ul li .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fce4ec;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .cute-navbar ul li:hover .dropdown {
+            display: block;
+        }
+
+        .cute-navbar ul li .dropdown a {
+            display: block;
+            padding: 10px 20px;
+            color: #5e5e5e;
+            background-color: #ffebcc;
+            border-radius: 10px;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cute-navbar ul li .dropdown a:hover {
+            background-color: #ffe0e0;
+        }
+
+        
+        .main-section h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        
+        .developer-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #e3f2fd;
+            border-radius: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 90%;
+        }
+
+        .developer-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+            position: relative;
+        }
+
+        .developer-section p.description {
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: #5e5e5e;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .developer-profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .profile-card {
+            background-color: #7179ba;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 250px;
+        }
+
+        .profile-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .profile-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #fdfeff;
+        }
+
+        .profile-card p {
+            font-size: 16px;
+            color: #fdfeff;
+        }
+		
+		footer {
+            background-color: #7179ba;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 10px 0;
+            color: #fdfeff;
+        }
+
+        footer .social-media a {
+            margin: 0 10px;
+            color: #333;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-media a:hover {
+            color: #ff6b81;
+        }
+		
+	
+		.sound-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f4bff5;
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .sound-button:hover {
+            background-color: #5e5e5e;
+        }
+		
+    </style>
+</head>
+
+<body>
+
+  
+    <nav class="cute-navbar">
+       
+        <a href="../perambahan/Index.html"><img src="../perambahan/picture/Logo.png" alt="Logo" class="logo"></a>
+        <ul>
+            <li><a href="../perambahan/Index.html">Home</a></li>
+            <li><a href="../Perambahan/About Us.html">About Us</a></li>
+            <li><a href="../Perambahan/lesson.html">Lesson</a></li>
+            <li><a href="../perambahan/Activity.html">Activity</a>
+            <li><a href="../perambahan/Contact Us.html">Contact Us</a></li>
+		</ul>
+    </nav>
+
+   
+
+ 
+    <div class="developer-section">
+        <h2>Developers</h2>
+        <p class="description">Here are one of the groups of girls that are inspire to make a website that is dedecation about "Perambahan Brunei" Where this websites teaches the people to learn about bruneian proverbs. </p>
+		<p></p>
+        <div class="developer-profile">
+            <div class="profile-card">
+                <img src="../perambahan/picture/irdina.jpg" alt="irdina">
+                <h3>Irdina</h3>
+                <p>Creative Designer</p>
+            </div>
+            <div class="profile-card">
+                <img src="../perambahan/picture/wafaa.jpg" alt="Wafaa'">
+                <h3>Dk Wafaa' Wa'ieyah</h3>
+                <p>Content Creator</p>
+            </div>
+	  </div>
+	 <p></p>
+      <p> CREDIT </p>
+				<p class="description"> Dewan Bahasa Dan Pustaka Brunei Kementerian Kebudayaan Belia Dan Sukan. </p>
+	 <p> MUSIC </p>
+	            <p class="description"> Canggung (instrumental) - Adnan Dan Rakan-rakan.
+	<p> VIDEO SONG </p>
+	            <p class="description"> Nya Urang Lagi Daulu ( Izzat Ramlee ) - Fofared Official 
+    </div>
+	
+	<audio id="background-sound" src="../perambahan/music/background_sound.mp3" loop></audio>
+    <button id="sound-toggle" class="sound-toggle">🔊</button>
+
+<script>
+        const soundToggleButton = document.getElementById('sound-toggle');
+        const backgroundSound = document.getElementById('background-sound');
+        let isSoundPlaying = localStorage.getItem('isSoundPlaying') === 'true';
+
+       
+        if (isSoundPlaying) {
+            backgroundSound.play();
+            soundToggleButton.textContent = '🔊';
+        } else {
+            soundToggleButton.textContent = '🔇';
+        }
+
+        soundToggleButton.addEventListener('click', () => {
+            isSoundPlaying = !isSoundPlaying;
+            if (isSoundPlaying) {
+                backgroundSound.play();
+                soundToggleButton.textContent = '🔊';
+            } else {
+                backgroundSound.pause();
+                soundToggleButton.textContent = '🔇';
+            }
+            localStorage.setItem('isSoundPlaying', isSoundPlaying);
+        });
+    </script>
+	
+	 <footer>
+        <p>&copy; 2024 Perambahan Brunei. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

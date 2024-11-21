@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordwall Game with Cute Navigation Bar</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #ebdff2;
+            background: url('../perambahan/picture/land.png') no-repeat center center/cover;
+            background-attachment: fixed;
+            flex-grow: 1;
+        }
+
+        .cute-navbar {
+            background-color: #7179ba;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        .cute-navbar .logo {
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .cute-navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .cute-navbar ul li {
+            margin: 0 20px;
+        }
+
+        .cute-navbar ul li a {
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            color: #5e5e5e;
+            display: block;
+            padding: 15px;
+            border-radius: 15px;
+            background-color: #ffebcc;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .cute-navbar ul li:nth-child(1) a {
+            background-color: #b3e5fc;
+            clip-path: polygon(5% 0%, 95% 0%, 100% 95%, 0% 100%);
+        }
+
+        .cute-navbar ul li:nth-child(2) a {
+            background-color: #dcedc8;
+            clip-path: polygon(0% 5%, 100% 5%, 95% 100%, 5% 95%);
+        }
+
+        .cute-navbar ul li:nth-child(3) a {
+            background-color: #ffecb3;
+            clip-path: polygon(10% 0%, 90% 0%, 100% 90%, 0% 100%);
+        }
+
+        .cute-navbar ul li:nth-child(4) a {
+            background-color: #ffcdd2;
+            clip-path: polygon(5% 5%, 95% 0%, 100% 95%, 0% 95%);
+        }
+
+        .cute-navbar ul li:nth-child(5) a {
+            background-color: #ffbe99;
+            clip-path: polygon(0% 5%, 100% 0%, 95% 95%, 5% 100%);
+        }
+
+        .cute-navbar ul li a:active {
+            transform: scale(0.95);
+        }
+
+        .game-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-items: center;
+            flex-grow: 1;
+        }
+
+        .game-box {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+        }
+
+        .game-box h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .game-box p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .game-box iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .sound-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f4bff5;
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #7179ba;
+            padding: 10px 15px;
+            text-align: center;
+            font-size: 0.8rem;
+            height: 40px;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 2px 0;
+            color: #fdfeff;
+            font-size: 0.8rem;
+        }
+
+        footer .social-media a {
+            margin: 0 5px;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        footer .social-media a:hover {
+            color: #ff6b81;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="cute-navbar">
+        <a href="../perambahan/Index.html"><img src="../perambahan/picture/Logo.png" alt="Logo" class="logo"></a>
+        <ul>
+            <li><a href="../perambahan/Index.html">Home</a></li>
+            <li><a href="../perambahan/About Us.html">About Us</a></li>
+            <li><a href="../perambahan/Lesson.html">Lesson</a></li>
+            <li><a href="../perambahan/Activity.html">Activity</a></li>
+            <li><a href="../perambahan/Contact Us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="game-container">
+        <div class="game-box">
+            <h3>Quizzes</h3>
+			<iframe src="https://wordwall.net/embed/143c9a38eee44e02874e33439e565d86?themeId=1&templateId=5&fontStackId=0"allowfullscreen></iframe>
+   
+           <p>Click the correct meaning for the bruneian proverbs.</p>
+        </div>
+
+        <div class="game-box">
+            <h3>Guess the Perambahan</h3>
+            <iframe src="https://wordwall.net/embed/faf8edd5b07e42cda7bb2a7ca57d6688?themeId=41&templateId=76&fontStackId=0" allowfullscreen></iframe>
+            <p>Guess the Bruneian proverbs and flip for the answer.</p>
+        </div>
+
+        <div class="game-box">
+            <h3>Complete the Sentence</h3>
+            <iframe src="https://wordwall.net/embed/7624bdb6b33d44d9a3175346bc32b941?themeId=21&templateId=36&fontStackId=21" allowfullscreen></iframe>
+            <p>Drag the correct word into their box.</p>
+        </div>
+
+        <div class="game-box">
+            <h3>Match the Words</h3>
+            <iframe src="https://wordwall.net/embed/bdd2131719324707a03de9778928278c?themeId=49&templateId=3&fontStackId=0" allowfullscreen></iframe>
+            <p>Match the Perambahan Brunei with their correct meaning.</p>
+        </div>
+    </div>
+
+    <audio id="background-sound" src="background_sound.mp3" loop></audio>
+    <button id="sound-toggle" class="sound-toggle">🔊</button>
+
+    <script>
+        const soundToggleButton = document.getElementById('sound-toggle');
+        const backgroundSound = document.getElementById('background-sound');
+        let isSoundPlaying = localStorage.getItem('isSoundPlaying') === 'true';
+
+        if (isSoundPlaying) {
+            backgroundSound.play();
+            soundToggleButton.textContent = '🔊';
+        } else {
+            soundToggleButton.textContent = '🔇';
+        }
+
+        soundToggleButton.addEventListener('click', () => {
+            isSoundPlaying = !isSoundPlaying;
+            if (isSoundPlaying) {
+                backgroundSound.play();
+                soundToggleButton.textContent = '🔊';
+            } else {
+                backgroundSound.pause();
+                soundToggleButton.textContent = '🔇';
+            }
+            localStorage.setItem('isSoundPlaying', isSoundPlaying);
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Perambahan Brunei. All Rights Reserved.</p>
+        <div class="social-media">
+            <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>

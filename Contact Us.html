@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #ebdff2;
+            height: 100%;
+        }
+
+        
+        .cute-navbar {
+            background-color: #7179ba;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        .cute-navbar .logo {
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .cute-navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .cute-navbar ul li {
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .cute-navbar ul li a {
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            color: #5e5e5e;
+            display: block;
+            padding: 15px;
+            border-radius: 15px;
+            background-color: #ffebcc;
+            position: relative;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+       
+        .cute-navbar ul li:nth-child(1) a {
+            background-color: #b3e5fc;
+            clip-path: polygon(5% 0%, 95% 0%, 100% 95%, 0% 100%);
+        }
+
+        .cute-navbar ul li:nth-child(2) a {
+            background-color: #dcedc8;
+            clip-path: polygon(0% 5%, 100% 5%, 95% 100%, 5% 95%);
+        }
+
+        .cute-navbar ul li:nth-child(3) a {
+            background-color: #ffecb3;
+            clip-path: polygon(10% 0%, 90% 0%, 100% 90%, 0% 100%);
+        }
+
+        .cute-navbar ul li:nth-child(4) a {
+            background-color: #ffcdd2;
+            clip-path: polygon(5% 5%, 95% 0%, 100% 95%, 0% 95%);
+        }
+
+        .cute-navbar ul li:nth-child(5) a {
+            background-color: #ffbe99;
+            clip-path: polygon(0% 5%, 100% 0%, 95% 95%, 5% 100%);
+        }
+
+        .cute-navbar ul li a:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .cute-navbar ul li a:active {
+            transform: scale(0.95);
+        }
+
+        
+        .contact-section {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #BF92E4;
+            margin: 150px auto 20px; 
+            max-width: 90%;
+            border-radius: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-section h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .contact-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            color: #5e5e5e;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact-form label {
+            font-size: 18px;
+            color: #333;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form button {
+            padding: 15px 30px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #ffebcc;
+            color: #5e5e5e;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+         footer {
+            background-color: #7179ba;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 10px 0;
+            color: #fdfeff;
+        }
+
+        footer .social-media a {
+            margin: 0 10px;
+            color: #333;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-media a:hover {
+            color: #ff6b81;
+        }
+		
+
+        .contact-form button:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+		
+		.sound-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f4bff5;
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .sound-button:hover {
+            background-color: #5e5e5e;
+        }
+    </style>
+</head>
+<body>
+
+   
+    <nav class="cute-navbar">
+        <a href="../perambahan/Index.html"><img src="../perambahan/picture/Logo.png" alt="Logo" class="logo"></a>
+        <ul>
+            <li><a href="../perambahan/Index.html">Home</a></li>
+            <li><a href="../perambahan/About Us.html">About Us</a></li>
+            <li><a href="../perambahan/Lesson.html">Lesson</a></li>
+            <li><a href="../perambahan/Activity.html">Activity</a></li>
+            <li><a href="../perambahan/Contact Us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="contact-section">
+        <h1>Contact Us</h1>
+        <p>We would love to hear your feedback! Fill out the form below and we'll get back to you as soon as possible.</p>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contact-form">
+            <input type="hidden" name="access_key" value="c8495a2c-0696-4948-8098-d7797198deb7">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="user_name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="user_email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+<audio id="background-sound" src="background_sound.mp3" loop></audio>
+    <button id="sound-toggle" class="sound-toggle">🔊</button>
+
+<script>
+        const soundToggleButton = document.getElementById('sound-toggle');
+        const backgroundSound = document.getElementById('background-sound');
+        let isSoundPlaying = localStorage.getItem('isSoundPlaying') === 'true';
+
+       
+        if (isSoundPlaying) {
+            backgroundSound.play();
+            soundToggleButton.textContent = '🔊';
+        } else {
+            soundToggleButton.textContent = '🔇';
+        }
+
+        soundToggleButton.addEventListener('click', () => {
+            isSoundPlaying = !isSoundPlaying;
+            if (isSoundPlaying) {
+                backgroundSound.play();
+                soundToggleButton.textContent = '🔊';
+            } else {
+                backgroundSound.pause();
+                soundToggleButton.textContent = '🔇';
+            }
+            localStorage.setItem('isSoundPlaying', isSoundPlaying);
+        });
+    </script>
+
+ <footer>
+        <p>&copy; 2024 Perambahan Brunei. All Rights Reserved.</p>
+    </footer>
+
+	
+</body>
+</html>

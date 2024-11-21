@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perambahan Brunei Home Page</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #ebdff2;
+            height: 100%;
+			
+        }
+
+        
+        .cute-navbar {
+            background-color: #7179ba;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+			
+        }
+
+       
+        .cute-navbar .logo {
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        
+        .cute-navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .cute-navbar ul li {
+            margin: 0 20px;
+            position: relative;
+        }
+
+       
+        .cute-navbar ul li a {
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            color: #5e5e5e;
+            display: block;
+            padding: 15px;
+            border-radius: 15px;
+            background-color: #ffebcc;
+            position: relative;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+       
+        .cute-navbar ul li:nth-child(1) a {
+            background-color: #b3e5fc;
+            clip-path: polygon(5% 0%, 95% 0%, 100% 95%, 0% 100%);
+        }
+
+        .cute-navbar ul li:nth-child(2) a {
+            background-color: #dcedc8;
+            clip-path: polygon(0% 5%, 100% 5%, 95% 100%, 5% 95%);
+        }
+
+        .cute-navbar ul li:nth-child(3) a {
+            background-color: #ffecb3;
+            clip-path: polygon(10% 0%, 90% 0%, 100% 90%, 0% 100%);
+        }
+
+        .cute-navbar ul li:nth-child(4) a {
+            background-color: #ffcdd2;
+            clip-path: polygon(5% 5%, 95% 0%, 100% 95%, 0% 95%);
+        }
+
+        .cute-navbar ul li:nth-child(5) a {
+            background-color: #ffbe99;
+            clip-path: polygon(0% 5%, 100% 0%, 95% 95%, 5% 100%);
+        }
+
+     
+        .cute-navbar ul li a::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 10px;
+            background-color: #ffd54f;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+        }
+
+        .cute-navbar ul li a:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .cute-navbar ul li a:active {
+            transform: scale(0.95);
+        }
+       
+        .section-container {
+            position: relative;
+            width: 80%;
+            max-width: 1200px;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 150px auto 0;
+        }
+
+        
+        .section-container::before {
+            content: "";
+            position: absolute;
+            top: 0
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../perambahan/picture/Banner.png') no-repeat center center/cover;
+            z-index: 1;
+        }
+
+        .text-content {
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            color: black;
+            padding: 20px;
+            text-align: left;
+            max-width: 450px;
+        }
+
+        .text-content h1 {
+            font-size: 48px;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .text-content p {
+            font-size: 18px;
+            margin-top: 15px;
+            line-height: 1.6;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        
+
+        .text-content button:hover {
+            background-color: #ddd;
+        }
+
+        
+        .video-container {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            width: 300px;
+            height: 200px;
+            border-radius: 15px;
+        }
+		
+		footer {
+            background-color: #7179ba;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 10px 0;
+            color: #fdfeff;
+        }
+
+        footer .social-media a {
+            margin: 0 10px;
+            color: #333;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-media a:hover {
+            color: #ff6b81;
+        }
+		
+		.sound-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f4bff5;
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+		
+        .sound-button:hover {
+            background-color: #5e5e5e;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <nav class="cute-navbar">
+        
+        <a href="../perambahan/Index.html"><img src="../perambahan/picture/Logo.png"  alt="Logo" class="logo"></a>
+        <ul>
+            <li><a href="../perambahan/Index.html">Home</a></li>
+            <li><a href="../perambahan/About Us.html">About Us</a></li>
+            <li><a href="../perambahan/Lesson.html">Lesson</a></li>
+            <li><a href="../perambahan/Activity.html">Activity</a>
+            <li><a href="../perambahan/Contact US.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+   
+    <div class="section-container">
+        
+        <div class="video-container">
+<iframe width="300" height="205" src="https://www.youtube.com/embed/jDxbLhnJ10o?si=gur0jSfIPL_jFgI2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         
+        </div>
+        
+        <div class="text-content">
+            <h1>Welcome To Perambahan Brunei</h1>
+            <p>Welcome to 'Perambahan Brunei' Here, we make learning fun with interactive videos, colorful lessons, and hands-on activities.</p>
+            
+        </div>
+    </div>
+	
+	<audio id="background-sound" src="../perambahan/music/background_sound.mp3" loop></audio>
+    <button id="sound-toggle" class="sound-toggle">🔊</button>
+
+<script>
+        const soundToggleButton = document.getElementById('sound-toggle');
+        const backgroundSound = document.getElementById('background-sound');
+        let isSoundPlaying = localStorage.getItem('isSoundPlaying') === 'true';
+
+        
+        if (isSoundPlaying) {
+            backgroundSound.play();
+            soundToggleButton.textContent = '🔊';
+        } else {
+            soundToggleButton.textContent = '🔇';
+        }
+
+        soundToggleButton.addEventListener('click', () => {
+            isSoundPlaying = !isSoundPlaying;
+            if (isSoundPlaying) {
+                backgroundSound.play();
+                soundToggleButton.textContent = '🔊';
+            } else {
+                backgroundSound.pause();
+                soundToggleButton.textContent = '🔇';
+            }
+            localStorage.setItem('isSoundPlaying', isSoundPlaying);
+        });
+    </script>
+	
+	 <footer>
+        <p>&copy; 2024 Perambahan Brunei. All Rights Reserved.</p>
+    </footer>
+	
+</body>
+</html>
+
